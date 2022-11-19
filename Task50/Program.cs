@@ -6,7 +6,7 @@ int[,] MatrixArray(int a, int b)
     {
         for (int j = 0; j < b; j++)
         {
-            array[i, j] = new Random().Next(-10, 10);
+            array[i, j] = new Random().Next(-10, 10);          // Заполняем двумерный массив рандомными числами
         }
     }
     return array;
@@ -16,7 +16,7 @@ void PrintArr(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)            // Выводим на экран двумерный массив
         {
             Console.Write($"{array[i, j]} ");
         }
@@ -28,10 +28,9 @@ void ElementSearch(int rows, int columns, int[,] array)
 {
     for (int i = 0; i <= rows; i++)
     {
-        for (int j = 0; j <= columns; j++)
+        for (int j = 0; j <= columns; j++)                         
         {
-            if (rows == i & columns == j) Console.Write($"This element is {array[rows, columns]} ");
-            else if (rows > array.GetLength(0) || columns > array.GetLength(1)) Console.WriteLine("This element does not exist");
+            if (rows == i & columns == j) Console.Write($"This element is {array[rows, columns]} "); // Ищем совпадение индексов с теми, которые ввел пользователь
 
         }
     }
